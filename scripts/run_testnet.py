@@ -39,7 +39,7 @@ class BlockchainTestnet:
             node_dir.mkdir(exist_ok=True)
             
             # Copy genesis file to each node directory
-            genesis_src = Path("genesis.json")
+            genesis_src = Path("config/genesis.json")
             if genesis_src.exists():
                 import shutil
                 shutil.copy(genesis_src, node_dir / "genesis.json")

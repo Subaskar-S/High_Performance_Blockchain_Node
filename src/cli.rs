@@ -23,7 +23,7 @@ pub struct Cli {
     pub bootstrap_peers: Option<String>,
 
     /// Path to genesis file
-    #[arg(long, default_value = "genesis.json")]
+    #[arg(long, default_value = "config/genesis.json")]
     pub genesis_file: PathBuf,
 
     /// Path to node configuration file

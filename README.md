@@ -2,6 +2,8 @@
 
 A high-performance, fault-tolerant blockchain node implementation in Rust, designed to handle 1000+ peers and 10,000+ TPS with Byzantine Fault Tolerant (BFT) consensus.
 
+> **📁 Project Reorganized**: Documentation moved to [`docs/`](docs/), configuration to [`config/`](config/), and setup tools to [`tools/`](tools/) for better organization.
+
 ## 🚀 Features
 
 - **High Performance**: Designed for 1000+ concurrent connections and 10,000+ TPS
@@ -34,34 +36,59 @@ A high-performance, fault-tolerant blockchain node implementation in Rust, desig
 ## 📁 Project Structure
 
 ```
-src/
-├── main.rs              # Application entry point
-├── cli.rs               # Command-line interface
-├── node.rs              # Main blockchain node orchestrator
-├── types.rs             # Core data structures
-├── consensus/           # BFT consensus implementation
-│   ├── mod.rs           # Consensus engine
-│   ├── pbft.rs          # PBFT algorithm
-│   ├── leader_election.rs # Leader selection
-│   └── view_change.rs   # View change protocol
-├── network/             # P2P networking layer
-│   ├── mod.rs           # Network manager
-│   ├── gossip.rs        # Gossip protocol
-│   ├── discovery.rs     # Peer discovery
-│   └── transport.rs     # Transport utilities
-├── storage/             # Persistent storage
-│   ├── mod.rs           # Storage interface
-│   ├── block_store.rs   # Block storage
-│   ├── state_store.rs   # State management
-│   └── transaction_store.rs # Transaction storage
-├── mempool.rs           # Transaction pool
-├── validation.rs        # Block/transaction validation
-├── metrics.rs           # Prometheus metrics
-└── api.rs               # JSON-RPC API
-
-benches/                 # Performance benchmarks
-scripts/                 # Utility scripts
-genesis.json             # Genesis configuration
+blockchain-node/
+├── src/                 # Source code
+│   ├── main.rs              # Application entry point
+│   ├── cli.rs               # Command-line interface
+│   ├── node.rs              # Main blockchain node orchestrator
+│   ├── types.rs             # Core data structures
+│   ├── consensus/           # BFT consensus implementation
+│   │   ├── mod.rs           # Consensus engine
+│   │   ├── pbft.rs          # PBFT algorithm
+│   │   ├── leader_election.rs # Leader selection
+│   │   └── view_change.rs   # View change protocol
+│   ├── network/             # P2P networking layer
+│   │   ├── mod.rs           # Network manager
+│   │   ├── gossip.rs        # Gossip protocol
+│   │   ├── discovery.rs     # Peer discovery
+│   │   └── transport.rs     # Transport utilities
+│   ├── storage/             # Persistent storage
+│   │   ├── mod.rs           # Storage interface
+│   │   ├── block_store.rs   # Block storage
+│   │   ├── state_store.rs   # State management
+│   │   └── transaction_store.rs # Transaction storage
+│   ├── mempool.rs           # Transaction pool
+│   ├── validation.rs        # Block/transaction validation
+│   ├── metrics.rs           # Prometheus metrics
+│   └── api.rs               # JSON-RPC API
+├── docs/                # Documentation
+│   ├── DOCUMENTATION.md     # Complete file documentation
+│   ├── ARCHITECTURE.md      # System architecture guide
+│   ├── DEPLOYMENT.md        # Deployment instructions
+│   ├── API_REFERENCE.md     # JSON-RPC API documentation
+│   └── PROJECT_SUMMARY.md   # Project overview
+├── config/              # Configuration files
+│   └── genesis.json         # Genesis blockchain configuration
+├── tools/               # Setup and utility tools
+│   ├── setup_windows.bat    # Windows setup script
+│   └── setup_windows.ps1    # PowerShell setup script
+├── scripts/             # Automation scripts
+│   ├── run_testnet.py       # 5-node testnet simulation
+│   ├── build_and_test.sh    # Build automation (Linux/Mac)
+│   ├── build_and_test.bat   # Build automation (Windows)
+│   ├── setup_git.sh         # Git setup (Linux/Mac)
+│   └── setup_git.bat        # Git setup (Windows)
+├── benches/             # Performance benchmarks
+│   ├── consensus_benchmark.rs # Consensus performance tests
+│   └── network_benchmark.rs   # Network performance tests
+├── .github/             # GitHub configuration
+│   └── workflows/
+│       └── ci.yml           # CI/CD pipeline
+├── README.md            # Main project documentation
+├── CONTRIBUTING.md      # Contribution guidelines
+├── LICENSE              # MIT license
+├── Cargo.toml           # Rust project configuration
+└── .gitignore           # Git ignore rules
 ```
 
 ## 🛠️ Installation
@@ -132,7 +159,7 @@ OPTIONS:
         --node-id <NODE_ID>              Node identifier [default: node-1]
         --listen-addr <LISTEN_ADDR>      Listen address for P2P [default: /ip4/0.0.0.0/tcp/0]
         --bootstrap-peers <PEERS>        Bootstrap peers (comma-separated)
-        --genesis-file <FILE>            Path to genesis file [default: genesis.json]
+        --genesis-file <FILE>            Path to genesis file [default: config/genesis.json]
         --db-path <PATH>                 Database path [default: ./data]
         --rpc-port <PORT>                JSON-RPC server port [default: 8545]
         --metrics-port <PORT>            Metrics server port [default: 9090]
@@ -145,7 +172,7 @@ OPTIONS:
 
 ### Genesis Configuration
 
-The `genesis.json` file defines the initial blockchain state:
+The `config/genesis.json` file defines the initial blockchain state:
 
 ```json
 {
