@@ -1,0 +1,67 @@
+{
+  "chain_id": "blockchain-testnet",
+  "genesis_time": "2024-01-01T00:00:00Z",
+  "initial_height": 0,
+  "consensus_params": {
+    "block_time_ms": 1000,
+    "max_block_size": 10485760,
+    "max_transactions_per_block": 1000,
+    "byzantine_fault_tolerance": true
+  },
+  "validators": [
+    {
+      "node_id": "validator-1",
+      "public_key": "0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+      "voting_power": 100,
+      "address": "validator1@localhost:26656"
+    },
+    {
+      "node_id": "validator-2", 
+      "public_key": "0x2345678901bcdef12345678901bcdef12345678901bcdef12345678901bcdef1",
+      "voting_power": 100,
+      "address": "validator2@localhost:26657"
+    },
+    {
+      "node_id": "validator-3",
+      "public_key": "0x3456789012cdef123456789012cdef123456789012cdef123456789012cdef12",
+      "voting_power": 100,
+      "address": "validator3@localhost:26658"
+    },
+    {
+      "node_id": "validator-4",
+      "public_key": "0x456789013def1234567890123def1234567890123def1234567890123def123",
+      "voting_power": 100,
+      "address": "validator4@localhost:26659"
+    }
+  ],
+  "initial_accounts": [
+    {
+      "address": "0x1111111111111111111111111111111111111111",
+      "balance": 1000000000000,
+      "nonce": 0
+    },
+    {
+      "address": "0x2222222222222222222222222222222222222222",
+      "balance": 1000000000000,
+      "nonce": 0
+    },
+    {
+      "address": "0x3333333333333333333333333333333333333333",
+      "balance": 1000000000000,
+      "nonce": 0
+    }
+  ],
+  "app_state": {
+    "native_token": {
+      "name": "BlockchainCoin",
+      "symbol": "BCC",
+      "decimals": 18,
+      "total_supply": 21000000000000000000000000
+    },
+    "governance": {
+      "voting_period": 604800,
+      "min_deposit": 1000000000000000000,
+      "quorum": "0.334"
+    }
+  }
+}
