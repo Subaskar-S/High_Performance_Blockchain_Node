@@ -6,59 +6,6 @@ This project is a complete, production-ready blockchain node implementation in R
 
 ## 📁 **Complete File Structure**
 
-```
-blockchain-node/
-├── 📄 Cargo.toml                    # Rust project configuration
-├── 📄 README.md                     # Main project documentation
-├── 📄 LICENSE                       # MIT license
-├── 📄 .gitignore                    # Git ignore rules
-├── 📄 genesis.json                  # Genesis blockchain configuration
-├── 📄 DOCUMENTATION.md              # Complete file documentation
-├── 📄 ARCHITECTURE.md               # System architecture guide
-├── 📄 DEPLOYMENT.md                 # Deployment instructions
-├── 📄 API_REFERENCE.md              # JSON-RPC API documentation
-├── 📄 CONTRIBUTING.md               # Contribution guidelines
-├── 📄 PROJECT_SUMMARY.md            # This summary file
-├── 📄 setup_windows.bat             # Windows setup script
-├── 📄 setup_windows.ps1             # PowerShell setup script
-├── 📁 .github/
-│   └── workflows/
-│       └── ci.yml                   # GitHub Actions CI/CD pipeline
-├── 📁 src/
-│   ├── 📄 main.rs                   # Application entry point
-│   ├── 📄 cli.rs                    # Command-line interface
-│   ├── 📄 node.rs                   # Main blockchain node orchestrator
-│   ├── 📄 types.rs                  # Core data structures
-│   ├── 📄 mempool.rs                # Transaction pool with priority queue
-│   ├── 📄 validation.rs             # Block/transaction validation
-│   ├── 📄 metrics.rs                # Prometheus metrics collection
-│   ├── 📄 api.rs                    # JSON-RPC API server
-│   ├── 📁 consensus/
-│   │   ├── 📄 mod.rs                # Consensus engine coordinator
-│   │   ├── 📄 pbft.rs               # PBFT consensus algorithm
-│   │   ├── 📄 leader_election.rs    # Leader selection mechanism
-│   │   └── 📄 view_change.rs        # View change protocol
-│   ├── 📁 network/
-│   │   ├── 📄 mod.rs                # Network manager with libp2p
-│   │   ├── 📄 gossip.rs             # Gossip protocol implementation
-│   │   ├── 📄 discovery.rs          # Peer discovery mechanisms
-│   │   └── 📄 transport.rs          # Transport utilities
-│   └── 📁 storage/
-│       ├── 📄 mod.rs                # Storage interface coordinator
-│       ├── 📄 block_store.rs        # Block storage with indexing
-│       ├── 📄 state_store.rs        # Account state management
-│       └── 📄 transaction_store.rs  # Transaction storage
-├── 📁 benches/
-│   ├── 📄 consensus_benchmark.rs    # Consensus performance tests
-│   └── 📄 network_benchmark.rs      # Network performance tests
-└── 📁 scripts/
-    ├── 📄 run_testnet.py            # 5-node testnet simulation
-    ├── 📄 build_and_test.sh         # Build automation (Linux/Mac)
-    ├── 📄 build_and_test.bat        # Build automation (Windows)
-    ├── 📄 setup_git.sh              # Git setup (Linux/Mac)
-    └── 📄 setup_git.bat             # Git setup (Windows)
-```
-
 ## 🏗️ **Architecture Components**
 
 ### **1. Core Infrastructure**
