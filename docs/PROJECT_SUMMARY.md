@@ -4,8 +4,6 @@
 
 This project is a complete, production-ready blockchain node implementation in Rust, designed for high throughput (10,000+ TPS) and fault tolerance (1000+ peers) with Byzantine Fault Tolerant consensus.
 
-## 📁 **Complete File Structure**
-
 ## 🏗️ **Architecture Components**
 
 ### **1. Core Infrastructure**
