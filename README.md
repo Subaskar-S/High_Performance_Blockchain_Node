@@ -2,8 +2,6 @@
 
 A high-performance, fault-tolerant blockchain node implementation in Rust, designed to handle 1000+ peers and 10,000+ TPS with Byzantine Fault Tolerant (BFT) consensus.
 
-> **📁 Project Reorganized**: Documentation moved to [`docs/`](docs/), configuration to [`config/`](config/), and setup tools to [`tools/`](tools/) for better organization.
-
 ## 🚀 Features
 
 - **High Performance**: Designed for 1000+ concurrent connections and 10,000+ TPS
