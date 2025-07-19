@@ -2,8 +2,6 @@
 
 A high-performance, fault-tolerant blockchain node implementation in Rust, designed to handle 1000+ peers and 10,000+ TPS with Byzantine Fault Tolerant (BFT) consensus.
 
-> **📁 Project Reorganized**: Documentation moved to [`docs/`](docs/), configuration to [`config/`](config/), and setup tools to [`tools/`](tools/) for better organization.
-
 ## 🚀 Features
 
 - **High Performance**: Designed for 1000+ concurrent connections and 10,000+ TPS
@@ -313,3 +311,23 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 **Note**: This is a demonstration blockchain implementation. For production use, additional security audits, testing, and hardening would be required.
+
+## 👨‍💻 Made by
+
+<div align="center">
+
+### **Subaskar_S**
+
+*Full-Stack Developer & Blockchain Enthusiast*
+
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Subaskar-S)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/subaskar97)
+
+</div>
+
+---
+
+**⭐ Star this repository if you find it useful!**
+
+**🔔 Watch this repository to stay updated with the latest features and improvements!**
+
