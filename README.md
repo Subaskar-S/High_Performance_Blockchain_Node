@@ -21,7 +21,7 @@ A high-performance, fault-tolerant blockchain node implementation in Rust, desig
 └─────────────────┘    └─────────────────┘    └─────────────────┘
          │                       │                       │
 ┌─────────────────────────────────────────────────────────────────┐
-│                    Blockchain Node                             │
+│                    Blockchain Node                              │
 ├─────────────────┬─────────────────┬─────────────────────────────┤
 │   Consensus     │    Mempool      │       Validation            │
 │   (PBFT)        │   (Priority)    │       (Rules)               │
