@@ -24,7 +24,7 @@ This document describes the architecture of our high-throughput, fault-tolerant 
 └─────────────────┴─────────────────┴─────────────────────────────┘
          │                 │                       │
 ┌─────────────────────────────────────────────────────────────────┐
-│                    Blockchain Node Core                        │
+│                    Blockchain Node Core                         │
 ├─────────────────┬─────────────────┬─────────────────────────────┤
 │   Consensus     │    Mempool      │       Validation            │
 │   (PBFT)        │   (Priority)    │       (Rules)               │
@@ -34,7 +34,7 @@ This document describes the architecture of our high-throughput, fault-tolerant 
 └─────────────────┴─────────────────┴─────────────────────────────┘
          │                 │                       │
 ┌─────────────────────────────────────────────────────────────────┐
-│                    Infrastructure Layer                        │
+│                    Infrastructure Layer                         │
 ├─────────────────┬─────────────────┬─────────────────────────────┤
 │   Async Runtime │   Cryptography  │   Serialization             │
 │   (Tokio)       │   (Ed25519)     │   (Serde/Bincode)           │
